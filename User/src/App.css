@@ -1,0 +1,11 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.body {
+  overflow: hidden;
+  background-color: #f8f8f8;
+}

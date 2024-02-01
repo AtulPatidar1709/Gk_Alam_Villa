@@ -1,0 +1,88 @@
+:root {
+  --ff-body: "Heebo", sans-serif;
+  --ff-heading: "Oswald", sans-serif;
+
+  --clr-primary: rgba(5, 39, 59, 0.6);
+  --clr-secondary: #ddb091;
+  --clr-text: #fff;
+  --fs-xl: 5rem;
+  --fs-600: 2rem;
+  --fs-400: 1rem;
+}
+
+.bg-1 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.img-1 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+.card-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: -12rem;
+}
+.card {
+  height: fit-content;
+  max-width: 950px;
+  flex-direction: column;
+  display: flex;
+  color: var(--clr-text);
+  border: 2px solid var(--clr-secondary);
+  border-radius: 16px;
+  background-color: var(--clr-primary);
+  justify-content: center;
+  align-items: center;
+  /* Add the following lines to move the card 50% up */
+}
+
+h1 {
+  padding-bottom: 30px;
+  font-size: 100%;
+  font-weight: normal;
+  font-size: var(--fs-xl);
+}
+
+span {
+  display: flex;
+  justify-content: center;
+}
+p {
+  padding-bottom: 30px;
+  font-size: 100%;
+  font-weight: normal;
+  font-size: var(--fs-600);
+}
+button {
+  font-size: 1rem;
+  padding: 1em 2em;
+  color: white;
+  background-color: #ce8f63;
+  border: 2px solid #ce8f63;
+  border-radius: 16px;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 824px) {
+  h1 {
+    font-size:var(--fs-600)
+  }
+  p {
+    font-size: var(--fs-400);
+  }
+  .card {
+    width: 90%;
+  }
+  button {
+    font-size: var(--fs-400);
+  }
+  .card-1 {
+    margin-top: -6rem;
+  }
+}
