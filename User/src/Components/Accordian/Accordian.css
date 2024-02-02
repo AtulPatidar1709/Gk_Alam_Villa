@@ -8,19 +8,15 @@
   );
 }
 
-.accordian {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0;
-}
-
 .item {
   background: transparent;
   margin-bottom: 5px;
   padding: 10px 20px;
+}
+
+.accodianCss .accordion  .accordion-item {
+   background-color: red;
+
 }
 
 .title {

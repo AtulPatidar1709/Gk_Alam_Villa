@@ -45,9 +45,9 @@
 }
 
 .sow-headline {
-  padding-left: 2rem;
+  color: #ce8f63;
   font-weight: 900;
-  font-size:x-large;
+  font-size: xxx-large;
 }
 
 /* .sow-headline ::before {
@@ -69,12 +69,12 @@
   font-weight: 400;
   margin: 0;
 }
-.paragraphs{
-  color:hsl(0, 0%, 42%);
+.paragraphs {
+  color: hsl(0, 0%, 42%);
 }
 
 .pera {
-  padding: 1rem 0;
+  padding: 0rem 0;
   font-size: 1rem;
 }
 
@@ -96,9 +96,15 @@
   .luxury > h3 {
     font-size: 1.1rem;
   }
+
+  .sow-headline {
+    color: #ce8f63;
+    font-size: x-large;
+    padding-top: 3rem;
+  }
 }
 
-@media screen and (min-width : 1900px) {
+@media screen and (min-width: 1900px) {
   .pera {
     font-size: 2rem;
   }

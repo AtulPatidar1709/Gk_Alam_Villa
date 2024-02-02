@@ -27,17 +27,6 @@
   font-size: x-large;
 }
 
-.wrapper {
-  margin: 0 auto;
-  padding: auto;
-  width: 90%;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Adjust minmax values as needed */
-}
 /* 
 .accordian-cover {
   display: flex;
@@ -45,14 +34,7 @@
   align-items: center;
 } */
 
-.accordian {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 0;
-}
+
 
 .item {
   background: transparent;
@@ -67,6 +49,7 @@
   justify-content: space-between;
   cursor: pointer;
   font-size: 1.2rem;
+  padding: 1rem;
 }
 
 .content {
@@ -89,23 +72,24 @@
   padding: 10px 0px;
 }
 
-.ex-collection {
+.Experiance {
   width: 80%;
-  /* height: 15vh; */
-  display: flex;
+  padding: 1rem;
   align-items: center;
   justify-content: space-between;
-  gap: 38px;
-  background: #657b87;
+  /* background: #657b87; */
   color: white;
 }
 
-.ex-collection > h1 {
-  display: flex;
-  font-size: 2rem;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1rem;
+.bgClr {
+  background-color: #647785;
+}
+
+.heads {
+  padding: 20px;
+  font-size: 100%;
+  font-weight: normal;
+
 }
 
 .main-ongoing {
@@ -129,6 +113,11 @@
   padding: 2rem 74px;
 }
 
+Video {
+    width: 100%;
+    border: 2px solid red;
+}
+
 @media screen and (max-width: 518px) {
   .why-heading {
     display: flex;
@@ -136,21 +125,17 @@
     font-size: 1.9rem;
   }
 
-  .ex-collection {
-    display:flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .ex-collection > h1 {
-    font-size: 26px;
-  }
   .ongoing-heading {
     text-align: center;
     font-size: 2rem;
   }
 
   .title {
-    font-size: 14px;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1069) {
+  .title {
+    font-size: 1.4rem;
   }
 }

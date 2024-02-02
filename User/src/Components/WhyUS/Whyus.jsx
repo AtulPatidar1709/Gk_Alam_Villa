@@ -4,6 +4,7 @@ import { DefaultPlayer as Video } from "react-html5video";
 import "./Whyus.css";
 import whySection from "../../assets/img/whySection.png";
 import Accordian from "../Accordian/Accordian";
+import { Col, Container, Row } from "reactstrap";
 
 const data = [
   {
@@ -41,8 +42,42 @@ const Whyus = () => {
         <h1 className="why-heading">WHY CHOOSE US?</h1>
         <h4 className="choose-us">WHY CHOOSE US</h4>
       </div>
-      <Accordian />
-      <div className="ex-collection">
+      <Container>
+        <Row className="align-items-center">
+          <Col md={"7"}>
+            <div className="accodianCss">
+              <Accordian />
+            </div>
+          </Col>
+          <Col md={"5"}>
+            <div className="img-fit">
+              <img src={whySection} alt="" className="img-about" />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="Experiance">
+        <Row className="align-items-center flex p-16 bgClr">
+          <Col md={4} className="align-items-center d-grid">
+            <h1 className="heads">
+              35+ <br /> Years
+            </h1>
+          </Col>
+          <Col md={4} className="align-items-center d-grid">
+            <h1 className="heads">
+              4000+ <br /> Happy Families
+            </h1>
+          </Col>
+          <Col md={4} className="align-items-center d-grid">
+            <h1 className="heads">
+              3 MILLION+ <br />
+              Sq.Ft. Delivered
+            </h1>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* <div className="ex-collection">
         <h1>
           35+ <br /> Years
         </h1>
@@ -53,11 +88,20 @@ const Whyus = () => {
           3 MILLION+ <br />
           Sq.Ft. Delivered
         </h1>
-      </div>
+      </div> */}
 
       <div className="main-ongoing">
         <h1 className="ongoing-heading">ONGOING PROJECTS</h1>
         <h4 className="choose-us">ONGOING PROJECTS</h4>
+        <div className="video-section">
+          <video autoPlay loop>
+            <source
+              src="https://www.youtube.com/watch?v=AwdejvMs8BQ"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   );

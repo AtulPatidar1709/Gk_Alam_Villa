@@ -1,7 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import whySection from "../../assets/img/whySection.png";
-import "./Accordian.css"
+import React, { useState } from "react";
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+  AccordionItem,
+} from "reactstrap";
 
 const data = [
   {
@@ -27,32 +30,28 @@ const data = [
 ];
 
 const Accordian = () => {
-  const [selected, setSelected] = useState(null);
-
-  const toggle = (i) => {
-    setSelected((prevSelected) => (prevSelected === i ? null : i));
+  const [open, setOpen] = useState("");
+  const toggle = (id) => {
+    if (open === id) {
+      setOpen();
+    } else {
+      setOpen(id);
+    }
   };
-
+  
   return (
-    <div className="Wrapper">
-      <div className="accordian">
-        {data.map((item, i) => (
-          <div className="item" key={i}>
-            <div className="title" onClick={() => toggle(i)}>
-              <a>{item.title}</a>
-              <span>{selected === i ? "-" : "+"}</span>
-            </div>
-            <div className={`content ${selected === i ? "show" : ""}`}>
-              <p>{item.content}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="img-fit">
-        <img src={whySection} alt="" className="img-about" />
-      </div>
+    <div>
+      <Accordion className="bg-transparent" flush open={open} toggle={toggle}>
+        {data.map((item,i) => (
+        <AccordionItem className="bg-transparent">
+          <AccordionHeader className="bg-transparent" targetId={item.title}>{item.title}</AccordionHeader>
+          <AccordionBody className="bg-transparent" accordionId={item.title}>
+            {item.content}
+          </AccordionBody>
+        </AccordionItem>
+              ))}
+      </Accordion>
     </div>
   );
 };
-
 export default Accordian;
