@@ -1,61 +1,57 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Col, Container, Row } from "reactstrap";
 import { DefaultPlayer as Video } from "react-html5video";
 import "./Whyus.css";
 import whySection from "../../assets/img/whySection.png";
 import Accordian from "../Accordian/Accordian";
-import { Col, Container, Row } from "reactstrap";
+import logo1 from "../../assets/img/SliderImg/logo1.png";
+import logo2 from "../../assets/img/SliderImg/logo2.png";
+import logo3 from "../../assets/img/SliderImg/logo3.png";
+import logo4 from "../../assets/img/SliderImg/logo4.png";
+import logo5 from "../../assets/img/SliderImg/logo5.png";
+import logo6 from "../../assets/img/SliderImg/logo6.png";
+import logo7 from "../../assets/img/SliderImg/logo7.png";
 
-const data = [
-  {
-    title: "1 Superior Construction",
-    content:
-      "With over three decades of experience, GK Builders and Developers is amongst the most trusted real estate developers in Hyderabad. Our brand is synonymous with superior quality of construction materials, best-in-industry practices, and compliance with safety protocol.",
-  },
-  {
-    title: "2 Value For Money",
-    content:
-      "We offer our customers the best value for their money and investment. While no compromises are made in the quality of construction, every effort is made to optimise costs and pass on the benefit to the customer.",
-  },
-  {
-    title: "3 Transparency",
-    content:
-      "All our operations and communication are transparent, and we encourage you to visit our sites at any time to get a look at our practices We are committed to following all RERA guidelines and complying with all local municipal laws while developing our projects.",
-  },
-  {
-    title: "4 Track Record",
-    content:
-      "Our 4000+ customers are truly our brand ambassadors and endorse our brand’s commitment and professionalism We have created an impeccable track and reputation and we are committed to taking this legacy forward.",
-  },
-];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
 
 const Whyus = () => {
   const [selected, setSelected] = useState(null);
+  const [logoElements, setLogoElements] = useState([]);
+
+  useEffect(() => {
+    // Clone logos and update state
+    const clonedLogos = logos.map((logo, index) => (
+      <img key={index} className="images" src={logo} alt="" />
+    ));
+    setLogoElements(clonedLogos);
+  }, []);
 
   const toggle = (i) => {
     setSelected((prevSelected) => (prevSelected === i ? null : i));
   };
 
   return (
-    <div className="main-why">
+    <>
       <div className="main-why">
-        <h1 className="why-heading">WHY CHOOSE US?</h1>
-        <h4 className="choose-us">WHY CHOOSE US</h4>
+        <div className="main-why">
+          <h1 className="why-heading">WHY CHOOSE US?</h1>
+          <h4 className="choose-us">WHY CHOOSE US</h4>
+        </div>
+        <Container>
+          <Row className="align-items-center">
+            <Col md={"7"}>
+              <div className="accodianCss">
+                <Accordian />
+              </div>
+            </Col>
+            <Col md={"5"}>
+              <div className="img-fit">
+                <img src={whySection} alt="" className="img-about" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
-      <Container>
-        <Row className="align-items-center">
-          <Col md={"7"}>
-            <div className="accodianCss">
-              <Accordian />
-            </div>
-          </Col>
-          <Col md={"5"}>
-            <div className="img-fit">
-              <img src={whySection} alt="" className="img-about" />
-            </div>
-          </Col>
-        </Row>
-      </Container>
       <Container className="Experiance">
         <Row className="align-items-center flex p-16 bgClr">
           <Col md={4} className="align-items-center d-grid">
@@ -76,20 +72,6 @@ const Whyus = () => {
           </Col>
         </Row>
       </Container>
-
-      {/* <div className="ex-collection">
-        <h1>
-          35+ <br /> Years
-        </h1>
-        <h1>
-          4000+ <br /> Happy Families
-        </h1>
-        <h1>
-          3 MILLION+ <br />
-          Sq.Ft. Delivered
-        </h1>
-      </div> */}
-
       <div className="main-ongoing">
         <h1 className="ongoing-heading">ONGOING PROJECTS</h1>
         <h4 className="choose-us">ONGOING PROJECTS</h4>
@@ -102,8 +84,11 @@ const Whyus = () => {
             Your browser does not support the video tag.
           </video>
         </div>
+        <div className="logos-slider">
+          <div className="logos-slide">{logoElements}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

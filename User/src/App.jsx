@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <Header />
-      <Happines />
-      <About />
-      <Whyus />
+      <div>
+        <Happines />
+      </div>
     </>
   );
 }

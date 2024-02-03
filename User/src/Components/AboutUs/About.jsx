@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import { Col, Container, Row } from "reactstrap";
+import {  Col, Container, Row } from "reactstrap";
 import aboutimg from "../../assets/img/about.png";
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
       <div className="main">
         <h1 className="about-heading">ABOUT US</h1>
       </div>
-      <Container>
+      <Container className="container-1">
         <Row className="align-items-center">
           <Col md={"5"}>
             <div className="img-fit">
@@ -58,7 +58,7 @@ const About = () => {
               </p>
             </div>
             <div>
-              <button>Book your site visit</button>
+              <button class="button-1" role="button">Book your site visit</button>
             </div>
           </Col>
         </Row>

@@ -1,6 +1,8 @@
 import React from "react";
 import background from "../../../assets/img/background.png";
 import "./Happines.css";
+import About from "../../AboutUs/About";
+import Whyus from "../../WhyUS/Whyus";
 const Happines = () => {
   return (
     <>
@@ -20,6 +22,8 @@ const Happines = () => {
           <button>BOOK YOUR SITE VISIT</button>
         </div>
       </div>
+      <About/>
+      <Whyus />
     </>
   );
 };

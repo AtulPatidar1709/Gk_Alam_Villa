@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
 .main-why {
   background-color: #e3ddd8;
   width: 100%;
 }
 
 .why-heading {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 9vw;
   padding: 0;
@@ -21,8 +23,8 @@
 .choose-us {
   width: 80%;
   color: #ce8f63;
-  font-family: Inter;
-  padding-left: 2rem;
+  font-family: "Inter", sans-serif;
+  padding-left: 1rem;
   font-weight: 900;
   font-size: x-large;
 }
@@ -33,8 +35,6 @@
   justify-content: center;
   align-items: center;
 } */
-
-
 
 .item {
   background: transparent;
@@ -89,36 +89,61 @@
   padding: 20px;
   font-size: 100%;
   font-weight: normal;
-
 }
 
 .main-ongoing {
   width: 90%;
-  display: flex;
   padding: 1rem;
   color: #c6c6c6;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  font-size: 5rem;
-  text-align: left;
   box-sizing: border-box;
 }
 
 .ongoing-heading {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
-  text-align: right;
-  font-size: 4rem;
-  padding: 2rem 74px;
+  text-align: center;
 }
 
 Video {
-    width: 100%;
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
-@media screen and (max-width: 518px) {
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translatex(-100%);
+  }
+}
+
+.logos-slider {
+  width: 80%;
+  overflow: hidden;
+  padding: 40px 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
+
+.logos-slider:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: 20s slide infinite linear;
+}
+
+.images {
+  height: 50px;
+  margin: 0 40px;
+}
+
+@media screen and (max-width: 514px) {
   .why-heading {
     display: flex;
     justify-content: center;
@@ -127,11 +152,14 @@ Video {
 
   .ongoing-heading {
     text-align: center;
-    font-size: 2rem;
+    font-size: larger;
   }
 
   .title {
     font-size: 1.1rem;
+  }
+  .choose-us {
+    font-size: medium;
   }
 }
 @media screen and (max-width: 1069) {
