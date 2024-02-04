@@ -4,6 +4,7 @@ import { DefaultPlayer as Video } from "react-html5video";
 import "./Whyus.css";
 import whySection from "../../assets/img/whySection.png";
 import Accordian from "../Accordian/Accordian";
+import whyUs from "../../assets/img/WhyUS.png";
 import logo1 from "../../assets/img/SliderImg/logo1.png";
 import logo2 from "../../assets/img/SliderImg/logo2.png";
 import logo3 from "../../assets/img/SliderImg/logo3.png";
@@ -52,6 +53,8 @@ const Whyus = () => {
           </Row>
         </Container>
       </div>
+
+      {/* Experiance Area */}
       <Container className="Experiance">
         <Row className="align-items-center flex p-16 bgClr">
           <Col md={4} className="align-items-center d-grid">
@@ -72,6 +75,8 @@ const Whyus = () => {
           </Col>
         </Row>
       </Container>
+
+      {/* Ongoing Area */}
       <div className="main-ongoing">
         <h1 className="ongoing-heading">ONGOING PROJECTS</h1>
         <h4 className="choose-us">ONGOING PROJECTS</h4>
@@ -84,9 +89,11 @@ const Whyus = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="logos-slider">
-          <div className="logos-slide">{logoElements}</div>
-        </div>
+      </div>
+
+      {/* Slider Area */}
+      <div className="logos-slider">
+        <div className="logos-slide">{logoElements}</div>
       </div>
     </>
   );

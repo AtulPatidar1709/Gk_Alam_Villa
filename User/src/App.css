@@ -5,7 +5,49 @@
   scrollbar-width: none; /* Firefox */
 }
 
+:root {
+  --ff-body: "NunitoSans-Regular";
+  --ff-heading: "Gilroy ExtraBold";
+  --clr-primary: rgba(5, 39, 59, 0.6);
+  --clr-secondary: #ddb091;
+  --clr-text: #fff;
+  --fs-xl: 5rem;
+  --fs-600: 2rem;
+  --fs-400: 1rem;
+  
+}
+
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src: url(./assets/font/Gilroy-ExtraBold.otf);
+}
+@font-face {
+  font-family: "Nunito Sans SemiBold";
+  src: url(./assets/font/NunitoSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Nunito Sans ExtraBold";
+  src: url(./assets/font/NunitoSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src: url(./assets/font/Gilroy-ExtraBold.otf);
+}
+@font-face {
+  font-family: "Gilroy Light";
+  src: url(./assets/font/Gilroy-Light.otf);
+}
+@font-face {
+  font-family: "NunitoSans Light";
+  src: url(./assets/font/NunitoSans-Light.ttf);
+}
+@font-face {
+  font-family: "NunitoSans-Regular";
+  src: url(./assets/font/NunitoSans-Regular.ttf);
+}
+
 .body {
   overflow: hidden;
   background-color: #f8f8f8;
+  font-family: "NunitoSans-Regular" !important;
 }
