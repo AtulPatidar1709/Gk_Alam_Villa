@@ -31,27 +31,27 @@ const data = [
 
 const Accordian = () => {
   const [open, setOpen] = useState("");
+
   const toggle = (id) => {
-    if (open === id) {
-      setOpen();
-    } else {
-      setOpen(id);
-    }
+    setOpen((prevOpen) => (prevOpen === id ? null : id));
   };
-  
+
   return (
     <div>
       <Accordion className="bg-transparent" flush open={open} toggle={toggle}>
-        {data.map((item,i) => (
-        <AccordionItem className="bg-transparent">
-          <AccordionHeader className="bg-transparent" targetId={item.title}>{item.title}</AccordionHeader>
-          <AccordionBody className="bg-transparent" accordionId={item.title}>
-            {item.content}
-          </AccordionBody>
-        </AccordionItem>
-              ))}
+        {data.map((item, index) => (
+          <AccordionItem key={index} className="bg-transparent">
+            <AccordionHeader className="bg-transparent" targetId={item.title}>
+              {item.title}
+            </AccordionHeader>
+            <AccordionBody className="bg-transparent" accordionId={item.title}>
+              {item.content}
+            </AccordionBody>
+          </AccordionItem>
+        ))}
       </Accordion>
     </div>
   );
 };
+
 export default Accordian;

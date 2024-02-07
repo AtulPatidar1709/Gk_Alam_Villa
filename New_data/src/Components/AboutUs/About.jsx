@@ -58,7 +58,7 @@ const About = () => {
               </p>
             </div>
             <div>
-              <button class="button-1" role="button">Book your site visit</button>
+              <button className="button-1" role="button">Book your site visit</button>
             </div>
           </Col>
         </Row>

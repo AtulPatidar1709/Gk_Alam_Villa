@@ -1,42 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Hamburger from "hamburger-react";
 import "./Header.css";
 import gklogo from "../../assets/img/gklogo.png";
 import jupally from "../../assets/img/jupally.png";
 import alamlogo from "../../assets/img/alamlogo.png";
 import menu1 from "../../assets/img/menu1.png";
+import hamburgeropen from "../../assets/icons/Humberg-open.svg";
+import closeHumberg from "../../assets/icons/Close-Humburg.svg";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="header">
+    <header className="header-section">
       <div className="wrapper">
-        {/* <div className="menu"> */}
         <div className="logos">
-          <div>
+          <div className="logo">
             <img src={gklogo} alt="" />
           </div>
-          <div>
-            <img src={jupally} alt="" className="img-2" />
+          <div className="logo">
+            <img src={jupally} height={120} alt="" />
           </div>
         </div>
-        <div className="links">
-          <ul>
-            <li>Home</li>
-            <li>About Alam Villas</li>
-            <li>Ongoing Projects</li>
-            <li>Testimonial</li>
-            <li>Contact Us</li>
-          </ul>
+        <div className={`nav-items ${isOpen && "open"}`}>
+          <a href="/home">HOME</a>
+          <a href="/about">ABOUT ALAM VILLAS</a>
+          <a href="/service">ONGOING PROJECTS</a>
+          <a href="/contact">TESTIMONIAL</a>
+          <a href="/ContactUs">Contact Us</a>
         </div>
-        <div className="logos-1">
+        <div className="last logo">
           <img src={alamlogo} alt="" />
         </div>
+        {/* <img src={hamburgeropen} className="hamburg-section" alt="" />
+        <img src={closeHumberg} className="closeHumberg" alt="" /> */}
+        <div
+          className={`nav-toggle ${isOpen && "open"}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className="bar"></div>
+        </div>
       </div>
-      <div className="icon-1">
-        <img src={menu1} alt="" className="icons" />
-      </div>
-    </div>
-    // </div>
+    </header>
   );
 };
 
