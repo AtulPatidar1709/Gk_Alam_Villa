@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Playfair+Display&display=swap");
 
 * {
-  margin: 0 auto;
-  padding: 0 auto;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* .wrapper {
+  max-width: 1820px;
+  width: 95%;
+  padding: 5px 0px;
+  gap: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
 
 :root {
   --ff-body: "NunitoSans-Regular";
@@ -51,4 +59,19 @@
   overflow: hidden;
   background-color: #f8f8f8;
   font-family: "NunitoSans-Regular" !important;
+}
+
+.large-heading {
+  font-family: "Gilroy ExtraBold";
+  font-weight: 100;
+  text-align: right;
+  font-size: clamp(2.75rem, 1.395rem + 7.478vw, 8.125rem);
+  /* font-size: clamp(2.75rem, 1.804rem + 4.732vw, 9.375rem); */
+  padding: 40px 0px 0px 0px;
+  color: #c6c6c6;
+}
+.small-headline {
+  color: #ce8f63;
+  font-weight: 900;
+  font-size: clamp(1.25rem, 0.83rem + 2.316vw, 2.313rem);
 }

@@ -1,23 +1,24 @@
 import React from "react";
 import "./About.css";
-import {  Col, Container, Row } from "reactstrap";
+import "../../App.css";
+import { Col, Container, Row } from "reactstrap";
 import aboutimg from "../../assets/img/about.png";
 
 const About = () => {
   return (
     <>
-      <div className="main">
-        <h1 className="about-heading">ABOUT US</h1>
-      </div>
       <Container className="container-1">
+        <Row className="align-items-end main">
+          <h1 className="large-heading">ABOUT US</h1>
+        </Row>
         <Row className="align-items-center">
-          <Col md={"5"}>
+          <Col md={"5"}  className="img-col align-self-start">
             <div className="img-fit">
               <img src={aboutimg} className="img-about" alt="" />
             </div>
           </Col>
           <Col md={"7"}>
-            <h1 className="sow-headline">About Us</h1>
+            <h1 className="sow-headline small-headline">About Us</h1>
             <h3>Built with the concept of luxury living!</h3>
             <div className="paragraphs">
               <p className="pera">
@@ -58,7 +59,9 @@ const About = () => {
               </p>
             </div>
             <div>
-              <button className="button-1" role="button">Book your site visit</button>
+              <button className="button-1" role="button">
+                Book your site visit
+              </button>
             </div>
           </Col>
         </Row>

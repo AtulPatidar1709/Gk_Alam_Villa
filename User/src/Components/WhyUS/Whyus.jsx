@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { DefaultPlayer as Video } from "react-html5video";
 import "./Whyus.css";
+import "../../App.css";
 import whySection from "../../assets/img/whySection.png";
 import Accordian from "../Accordian/Accordian";
 import whyUs from "../../assets/img/WhyUS.png";
@@ -35,8 +36,8 @@ const Whyus = () => {
     <>
       <div className="main-why">
         <div className="main-why">
-          <h1 className="why-heading">WHY CHOOSE US?</h1>
-          <h4 className="choose-us">WHY CHOOSE US</h4>
+          <h1 className="why-heading large-heading">WHY CHOOSE US?</h1>
+          <h4 className="choose-us small-headline pl-5">WHY CHOOSE US</h4>
         </div>
         <Container>
           <Row className="align-items-center">
@@ -77,24 +78,27 @@ const Whyus = () => {
       </Container>
 
       {/* Ongoing Area */}
-      <div className="main-ongoing">
-        <h1 className="ongoing-heading">ONGOING PROJECTS</h1>
-        <h4 className="choose-us">ONGOING PROJECTS</h4>
-        <div className="video-section">
-          <video autoPlay loop>
-            <source
-              src="https://www.youtube.com/watch?v=AwdejvMs8BQ"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+      <Container className="w-90 p-16 flex-column text-bg-[#c6c6c6] border">
+        <div className="main-ongoing">
+          <h1 className="ongoing-heading large-heading">ONGOING PROJECTS</h1>
+          <h4 className="choose-us">ONGOING PROJECTS</h4>
+          <div className="video-section">
+            <video autoPlay loop>
+              <source
+                src="https://www.youtube.com/watch?v=AwdejvMs8BQ"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-      </div>
-
+      </Container>
+      <Container className="w-80">
+        <div className="logos-slider">
+          <div className="logos-slide">{logoElements}</div>
+        </div>
+      </Container>
       {/* Slider Area */}
-      <div className="logos-slider">
-        <div className="logos-slide">{logoElements}</div>
-      </div>
     </>
   );
 };

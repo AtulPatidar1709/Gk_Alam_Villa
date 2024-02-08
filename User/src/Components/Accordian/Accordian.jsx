@@ -38,10 +38,10 @@ const Accordian = () => {
 
   return (
     <div>
-      <Accordion className="bg-transparent" flush open={open} toggle={toggle}>
+      <Accordion className="d-grid gap-5 bg-transparent" flush open={open} toggle={toggle}>
         {data.map((item, index) => (
           <AccordionItem key={index} className="bg-transparent">
-            <AccordionHeader className="bg-transparent" targetId={item.title}>
+            <AccordionHeader className="bg-bg-transparent" targetId={item.title}>
               {item.title}
             </AccordionHeader>
             <AccordionBody className="bg-transparent" accordionId={item.title}>
