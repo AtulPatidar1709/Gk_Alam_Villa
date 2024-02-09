@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import "../../App.css";
+import 'animate.css';
 import { Col, Container, Row } from "reactstrap";
 import aboutimg from "../../assets/img/about.png";
 
@@ -9,19 +10,19 @@ const About = () => {
     <>
       <Container className="container-1">
         <Row className="align-items-end main">
-          <h1 className="large-heading">ABOUT US</h1>
+          <h1 className="large-heading animate__animated animate__bounceInLeft">ABOUT US</h1>
         </Row>
         <Row className="align-items-center">
           <Col md={"5"}  className="img-col align-self-start">
             <div className="img-fit">
-              <img src={aboutimg} className="img-about" alt="" />
+              <img src={aboutimg} className="img-about animate__animated animate__bounceInRight" alt="" />
             </div>
           </Col>
           <Col md={"7"}>
             <h1 className="sow-headline small-headline">About Us</h1>
-            <h3>Built with the concept of luxury living!</h3>
-            <div className="paragraphs">
-              <p className="pera">
+            <h3 className="animate__animated animate__bounceInUp">Built with the concept of luxury living!</h3>
+            <div className="paragraphs animate__animated animate__bounceInUp">
+              <p className="pera ">
                 Alam villas are an expression of luxury living and a synonym for
                 the captivating and innovative design of a gated community.
                 Blending the Indian joint family culture and much-loved privacy

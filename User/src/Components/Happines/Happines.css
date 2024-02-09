@@ -1,3 +1,5 @@
+@import "animate.css";
+
 .bg-1 {
   display: flex;
   align-items: flex-start;
@@ -5,9 +7,8 @@
 }
 
 .container_card {
-  max-width: 90%;
   width: calc(80% - (0.2 * 30px));
-  margin-top: calc(-5rem  + -6vw);
+  margin-top: calc(-5rem + -6vw);
 }
 
 .bg-1 img {
@@ -20,6 +21,11 @@
   border-radius: 8px;
   background-color: #05273b99;
   color: white;
+}
+
+.heroSectionBox {
+  text-align: center;
+  padding: 50px 0px;
 }
 
 .card h1 {
@@ -42,19 +48,22 @@
 }
 
 .card p {
+  display: flex;
   line-height: clamp(1.3125rem, 1.3125rem + 2.1vw, 53px);
   font-family: "Nunito Sans SemiBold";
   padding: 0;
   font-weight: 400;
   font-size: clamp(0.638rem, 0.501rem + 1.304vw, 1.875rem);
   font-style: normal;
+  flex-direction: column-reverse;
+  color: white;
 }
 
 .card button {
   line-height: clamp(13px, 17px, 21px);
   font-family: "Nunito Sans SemiBold";
   font-weight: 400;
-  font-size: clamp(16px,18px,21px);
+  font-size: clamp(16px, 18px, 21px);
   width: 237px;
   padding: 18px;
   cursor: pointer;

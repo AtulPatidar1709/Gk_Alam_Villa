@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Col, Container, Row } from "reactstrap";
+import { Card, Col, Container, Row } from "reactstrap";
 import { DefaultPlayer as Video } from "react-html5video";
 import "./Whyus.css";
 import "../../App.css";
+import "../Cards/Cards";
+// import "../YoutubeEmbed.js";
 import whySection from "../../assets/img/whySection.png";
 import Accordian from "../Accordian/Accordian";
 import whyUs from "../../assets/img/WhyUS.png";
@@ -13,6 +15,7 @@ import logo4 from "../../assets/img/SliderImg/logo4.png";
 import logo5 from "../../assets/img/SliderImg/logo5.png";
 import logo6 from "../../assets/img/SliderImg/logo6.png";
 import logo7 from "../../assets/img/SliderImg/logo7.png";
+import Cards from "../Cards/Cards";
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
 
@@ -36,8 +39,12 @@ const Whyus = () => {
     <>
       <div className="main-why">
         <div className="main-why">
-          <h1 className="why-heading large-heading">WHY CHOOSE US?</h1>
-          <h4 className="choose-us small-headline pl-5">WHY CHOOSE US</h4>
+          <h1 className="why-heading large-heading animate__animated animate__fadeInDown">
+            WHY CHOOSE US?
+          </h1>
+          <h4 className="choose-us small-headline pl-5 animate__animated animate__bounceInUp">
+            WHY CHOOSE US
+          </h4>
         </div>
         <Container>
           <Row className="align-items-center">
@@ -79,25 +86,22 @@ const Whyus = () => {
 
       {/* Ongoing Area */}
       <Container className="w-90 p-16 flex-column text-bg-[#c6c6c6] border">
-        <div className="main-ongoing">
-          <h1 className="ongoing-heading large-heading">ONGOING PROJECTS</h1>
-          <h4 className="choose-us">ONGOING PROJECTS</h4>
-          <div className="video-section">
-            <video autoPlay loop>
-              <source
-                src="https://www.youtube.com/watch?v=AwdejvMs8BQ"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
+        <Col className="main-ongoing">
+          <Row>
+            <h1 className="ongoing-heading large-heading">ONGOING PROJECTS</h1>
+          </Row>
+          <Row>
+            <h4 className="choose-us small-headline">ONGOING PROJECTS</h4>
+          </Row>
+          <Row>{/* <YoutubeEmbed embedId="oJM7v0Jpn3E" /> */}</Row>
+        </Col>
       </Container>
       <Container className="w-80">
         <div className="logos-slider">
           <div className="logos-slide">{logoElements}</div>
         </div>
       </Container>
+      <Cards/>
       {/* Slider Area */}
     </>
   );

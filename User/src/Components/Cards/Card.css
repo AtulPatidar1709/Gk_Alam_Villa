@@ -1,0 +1,33 @@
+.bg-card {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.bg-card > img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-container {
+  background-image: url("../../assets/img/bg-card-logo.png"); /* Use url() for the image path */
+  background-size: cover; /* Adjust to your needs */
+  color: black;
+}
+
+.card-slide {
+  padding: 21px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bg-card-customers-img {
+  display: flex;
+  align-items: flex-start;
+  /* align-items: center; This line seems redundant, you might want to remove it */
+}
+
+.bg-img-card {
+  width: 100%;
+}

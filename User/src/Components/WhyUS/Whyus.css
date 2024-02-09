@@ -11,11 +11,25 @@
 }
 
 .why-heading {
+  animation: fadeIn linear;
+  animation-range-start: 500px;
+  animation-range-end: 300px;
   padding: 1rem;
   justify-content: flex-end;
   text-align: center;
   box-sizing: border-box;
   align-items: start;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 
@@ -143,6 +157,12 @@ Video {
   height: 50px;
   margin: 0 40px;
 }
+
+.img-card {
+  object-fit: cover;
+}
+
+
 
 @media screen and (max-width: 514px) {
   .why-heading {
