@@ -1,44 +1,27 @@
-/* .about-alm-back {
-    background-image: url("../../assets/img/bg-card-logo.png");
-    background-size: cover;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: start;;
-  } */
-
-.about-ala-logo {
+.img-contain {
   background-image: url("../../assets/img/bg-card-logo.png");
+  background-size: cover;
   background-position: center;
+  position: relative;
   display: flex;
   align-items: flex-start;
+  object-fit: cover;
+}
+
+.img-contain img {
   width: 100%;
   margin: 0 auto;
 }
 
-.about-ala-logo img {
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* .img-contain{
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    height: 100vh;
-  } */
-
-/* .img-contain img {
-    width: 100%;
-    margin: 0 auto;
-  } */
- 
-.text-area{
+.text-area {
+  /* position: absolute; */
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   text-align: start;
   justify-content: center;
-  padding: 20% 7px;
+  padding: 16% 10px;
+  z-index: 1;
 }
 
 h5 {
@@ -51,5 +34,41 @@ h5 {
 h2 {
   font-family: "Gilroy ExtraBold";
   font-weight: 100;
-  font-size: clamp(2.188rem, 1.522rem + 3.804vw, 4.375rem);
+  font-size: clamp(1.222rem, 1.222rem + 3.804vw, 4.375rem);
+}
+
+.aboutContainer {
+  color: #000;
+}
+
+.CardsContainer {
+  justify-content: center;
+  align-items: center;
+}
+
+.card-2 {
+  display: flex;
+  background-image: url(/src/assets/img/Amenities/New-Project-1.jpg);
+  height: 50vh;
+  background-size: cover;
+  border-radius: 10px;
+  width: 100%;
+  align-items: end;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card-2 > img {
+  object-fit: cover;
+}
+
+.heading-holder {
+  font-size: calc(0.375rem + 1.5vw);
+}
+
+.heading-holder > h1 {
+  background-color: #05273b;
+  padding: 2px 4px;
+  border-radius: 5px;
 }
