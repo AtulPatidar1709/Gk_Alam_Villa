@@ -1,69 +1,70 @@
 import React, { useState } from "react";
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-  Container,
-  Col,
-  Row,
-} from "reactstrap";
+import { Container, Col, Row } from "reactstrap";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Card.css";
 import CardBg from "../../assets/img/bg-card-logo.png";
+import cardImage1 from "../../assets/img/CardImg/amit.jpg";
+import cardImage2 from "../../assets/img/CardImg/manasa.jpg";
+import cardImage3 from "../../assets/img/CardImg/prasad.jpg";
 
 const reviews = [
   {
     id: 1,
-    name: "@darryncodes",
-    job: "Front-end developer",
-    img: "https://www.darryncodes.co.uk/img/darryncodes-profile.jpg",
-    text: '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iste, voluptate quam ipsum aliquam, corporis dicta distinctio, ea omnis quo quae non nulla facere rerum aperiam."',
+    name: "Prasad G",
+    job: " - Senior General Manager",
+    company : "FHPL(Apollo Group)",
+    img: cardImage1,
+    text: "  In sum, our experience with GK Builders and Developers was more than satisfactory. The team met deadlines, was easy to work with, helpful in making difficult decisions, respectful of our unique wishes, showed excellent attention to detail and was kind and welcoming to customers. ",
   },
   {
     id: 2,
-    name: "@annajohnson",
-    job: "UI Designer",
-    img: "https://randomuser.me/api/portraits/women/90.jpg",
-    text: '"Morbi a facilisis quam. In nec lorem sollicitudin, volutpat ex sit amet, sodales augue. Duis pretium sagittis odio, nec porttitor purus vulputate id. Proin urna metus, luctus sit amet."',
+    name: "Amit Kumar",
+    job: "- Project Manager",
+    company:"Crowd",
+    img: cardImage2,
+    text: "   For us, buying a new home was not just about investing in a property but it was a part of building our dreams. We had so many plans and ideas for our first home together. We felt that GK Builders and Developers is the right choice since the brand has a very good reputation.  ",
   },
   {
     id: 3,
-    name: "@peterjones",
-    job: "Intern",
-    img: "https://randomuser.me/api/portraits/men/1.jpg",
-    text: '"Donec hendrerit semper eros sed pellentesque. Nunc varius condimentum odio vitae posuere. Nulla sollicitudin sem mauris, eget porttitor justo pulvinar et. Maecenas maximus."',
-  },
-  {
-    id: 4,
-    name: "@billanderson",
-    job: "UX Designer",
-    img: "https://randomuser.me/api/portraits/men/67.jpg",
-    text: '"Curabitur turpis felis, pellentesque feugiat tristique sit amet, vestibulum eu turpis. Sed commodo nulla quis metus consequat imperdiet. Aenean at elit dui. Donec sagittis ultricies."',
+    name: " Manasa Atmakuru  ",
+    job: " -  Project Lead",
+    company : "Tech Mahindra",
+    img: cardImage3,
+    text: " GK Builders and Developers helped and supported us throughout the planning and buying process and have been so very professional and truly wonderful. I have had to make so many decisions and they have been with me all the way. ",
   },
 ];
 
 const Cards = (args) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <>
-      {/* <div className="bg-card">
-        <img src={CardBg} alt="" className="img-1" />
-      </div> */}
-      <Container className="card-container" md={"8"} lg={"6"}>
-        <Row className="card-slide ">
-          <Col className="bg-card-customers-img"  md={"4"} lg={"6"}>
-            <img src={CardBg} alt="" className="bg-img-card"/>
-          </Col>
-          <Col md={"6"} lg={"6"}>
-            <h3>Amit Kumar</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Excepturi, aspernatur, delectus natus officiis illum suscipit in
-              voluptatem sed molestiae est quod placeat ad cum reprehenderit
-              omnis.
-            </p>
-          </Col>
-        </Row>
+      <Container className="card-container">
+        <Slider {...settings} >
+          {reviews.map((item, index) => (
+            <Row key={index} className="card-slide d-flex align-items-center justify-content-center">
+              <Col className="bg-card-customers-img " md={"3"} lg={"4"} sm={"12"}>
+                <img src={item.img} alt="Card-images" className="bg-img-card" />
+              </Col>
+              <Col md={"6"} lg={"6"}>
+                <h4>
+                  {item.name} <span>{item.job}</span>
+                </h4>
+                <h4>{item.company}</h4>
+                <p>{item.text}</p>
+              </Col>
+            </Row>
+          ))}
+        </Slider>
       </Container>
     </>
   );

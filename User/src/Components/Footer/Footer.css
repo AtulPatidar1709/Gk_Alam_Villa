@@ -1,3 +1,52 @@
-.footer-wrapper {
-    background-image: "../../assets/img/footerback.png";
+* {
+  color: white;
+}
+
+.footer-back {
+  background-image: url("../../assets/img/footerback.png"); /* Use url() for the image path */
+  background-size: cover;
+}
+
+.footer {
+  max-width: 90%;
+  padding: 60px;
+}
+
+.wrapper-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+Col {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.Row {
+  align-items: center;
+  justify-content: start;
+}
+
+h3 {
+  color: #ddb091;
+  align-items: center;
+  font-family: "Nunito Sans ExtraBold";
+  font-weight: 100;
+  text-align: center;
+}
+
+/* .wrapper-main {
+    padding: 60px;
+} */
+
+li {
+  list-style: none;
+}
+
+.item-col {
+  padding: 5px -1px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
