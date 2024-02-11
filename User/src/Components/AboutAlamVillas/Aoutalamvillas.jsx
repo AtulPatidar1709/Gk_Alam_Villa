@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-} from "reactstrap";
+
 import { Container, Row, Col } from "reactstrap";
 import "../AboutAlamVillas/Aboutalavillas.css";
-import bgcardlogo from "../../assets/img/bg-card-logo.png";
 import About from "../AboutUs/About";
 import Project1 from "../../assets/img/Amenities/New-Project-1.jpg";
 import Project2 from "../../assets/img/Amenities/New-Project-2.jpg";
@@ -69,7 +62,7 @@ const Aoutalamvillas = () => {
         </Row>
         <Row className="pb-4 CardsContainer">
           {cardsData.slice(0, 3).map((items, index) => (
-            <Col className={index} xs={"11"} sm={"6"} md={"4"} key={items.id}>
+            <Col className={items.name} xs={"11"} sm={"6"} md={"4"} lg={"5"} key={items.id}>
               <div
                 className="card-2"
                 style={{ backgroundImage: `url(${items.img})` }}

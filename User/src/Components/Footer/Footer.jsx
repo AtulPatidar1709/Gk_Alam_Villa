@@ -7,61 +7,54 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer-back">
-      <Container className="footer">
-        <Row className="wrapper-main">
-          <Row className="" md={"12"} sm={"12"} lg={"12"}>
-            <Col md={"4"} sm={"10"} lg={"2"} className="item-col">
-              <img src={FooterInner} alt="" />
-            </Col>
-            <Col md={"6"} sm={"10"} lg={"4"} className="item-col">
-              <Row>
-                <h3>ONGOING PROJECTS</h3>
-              </Row>
-              <Row>
-                <Col md={"6"} sm={"6"} lg={"6"}>
-                  <ul>Casa Grande</ul>
-                  <ul>Zenith</ul>
-                  <ul>Park east and Ram’s Arcade</ul>
-                  <ul>Surya Arcade</ul>
-                </Col>
-                <Col md={"6"} sm={"6"} lg={"6"}>
-                  <ul>Triad</ul>
-                  <ul>Festoon</ul>
-                  <ul>Pearl Enclave</ul>
-                </Col>
-              </Row>
-            </Col>
-            <Col md={"6"} sm={"10"} lg={"3"} className="item-col">
-              <Row className="item-col">
-                <h3 className="item-col">Get in Touch</h3>
-              </Row>
-              <Row>
-                <p className="item-col">
-                  #35/8, Aastha Gk Colony, Sainikpuri, Secunderabad,
-                  Telengana-500094.
-                </p>
-              </Row>
-              <Row className="item-col">
-                <li>Salesteam@gkdevelopers.in</li>
-                <li>+91 81858 68788</li>
-                <li>www.gkdevelopers.in</li>
-                <li>Privacy Policy</li>
-              </Row>
-            </Col>
-            <Col md={"6"} sm={"10"} lg={"3"} className="item-col">
-              <Row>
-                <h3>Join Our Newsletter</h3>
-                <p>Get the latest project updates</p>
-              </Row>
-              <Row>
-                <input placeholder="Your E-mail Address"></input>
-                <Button>Submit</Button>
-              </Row>
-            </Col>
-          </Row>
-          <Row>
-            <link rel="stylesheet" href={twitter} />
-          </Row>
+      <Container>
+        <Row className="pt-5 rowsection">
+          <Col md={"5"} sm={"9"} xs={"10"} lg={"2"}>
+            <img src={FooterInner} alt="footer-inner" />
+          </Col>
+          <Col md={"5"} sm={"10"} xs={"10"} lg={"3"}>
+            <h3>ONGOING PROJECTS</h3>
+            <div className="ongoingList">
+              <ul>
+                <li>Casa Grande</li>
+                <li>Zenith</li>
+                <li>Park east and Ram’s Arcade</li>
+                <li>Surya Arcade</li>
+              </ul>
+              <ul>
+                <li>Triad</li>
+                <li>Festoon</li>
+                <li>Pearl Enclave</li>
+              </ul>
+            </div>
+          </Col>
+          <Col md={"5"} sm={"10"} xs={"10"} lg={"3"}>
+            <h3>Get in Touch</h3>
+            <div className="paragraph">
+              <p>
+                #35/8, Aastha Gk Colony, Sainikpuri, Secunderabad,
+                Telengana-500094.
+              </p>
+
+              <div className="socialLinks">
+                <p>Salesteam@gkdevelopers.in</p>
+                <p>+91 81858 68788</p>
+                <p>www.gkdevelopers.in</p>
+                <p>Privacy Policy</p>
+              </div>
+            </div>
+          </Col>
+          <Col md={"6"} sm={"10"} xs={"10"} lg={"4"}>
+          <h3>Join Our Newsletter </h3>
+          <div>
+            <p>Get the latest project updates</p>
+            <br />
+            <div className="emailArea">
+              <input type="text" placeholder="Your Email-Address"  className="inputArea"/>
+              <button className="btnSubmit">Submit</button>
+            </div>
+          </div>
+          </Col>
         </Row>
       </Container>
     </div>

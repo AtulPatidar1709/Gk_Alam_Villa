@@ -1,0 +1,14 @@
+.projects-plan-container {
+    width: 70vw; /* Set the width of your container */
+    margin: auto; /* Center the container horizontally */
+  }
+  
+  .maps-card {
+
+  }
+  .maps-imgs img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    margin: auto; /* Center the image horizontally within the container */
+  }

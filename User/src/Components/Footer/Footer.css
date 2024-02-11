@@ -7,46 +7,46 @@
   background-size: cover;
 }
 
-.footer {
-  max-width: 90%;
-  padding: 60px;
-}
-
-.wrapper-main {
-    display: flex;
-    justify-content: space-between;
-}
-
-Col {
+.ongoingList {
   display: flex;
-  align-items: center;
-  justify-content: start;
+  justify-content: space-between;
 }
 
-.Row {
-  align-items: center;
-  justify-content: start;
-}
-
-h3 {
-  color: #ddb091;
-  align-items: center;
-  font-family: "Nunito Sans ExtraBold";
-  font-weight: 100;
-  text-align: center;
-}
-
-/* .wrapper-main {
-    padding: 60px;
-} */
-
-li {
+.ongoingList > ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.item-col {
-  padding: 5px -1px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+h3 {
+  display: inline-block;
+  font-family: "Nunito Sans ExtraBold";
+  font-size: 21px;
+  color: #ddb091;
+}
+.emailArea {
+  display: grid;
+}
+
+.inputArea {
+  padding: 4px 6px;
+  background: transparent;
+  border: 2px solid #eef7f7;
+  border-radius: 7px;
+}
+
+.btnSubmit {
+  margin-top: 4px;
+  width: 50%;
+  padding: 5px;
+  background: #ddb091;
+  border-radius: 6px;
+  color: white;
+}
+
+
+@media screen and (max-width : 991px) {
+    .rowsection {
+      gap: 42px;;
+    }
 }
