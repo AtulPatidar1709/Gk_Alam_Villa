@@ -9,6 +9,7 @@ import Project3 from "../../assets/img/Amenities/New-Project-3.jpg";
 import Project4 from "../../assets/img/Amenities/New-Project-4.jpg";
 import Project5 from "../../assets/img/Amenities/New-Project-5.jpg";
 import ProjectPlans from "../ProjectsPlan/ProjectsPlan";
+import Specification from "../Specification/Specification";
 
 const cardsData = [
   {
@@ -40,7 +41,7 @@ const cardsData = [
 
 const Aoutalamvillas = () => {
   return (
-    <div className="">
+    <>
       <div className="img-contain">
         <div className="text-area">
           <h5>Magnificent living lies ahead. </h5>
@@ -55,14 +56,21 @@ const Aoutalamvillas = () => {
       </Container>
       <Container className="CardsContainer">
         <Row>
-          <h1>AMENITIES</h1>
+          <h1 className="large-heading">AMENITIES</h1>
         </Row>
         <Row>
-          <p>A WORLD OF WONDERS</p>
+          <p className="small-headline">A WORLD OF WONDERS</p>
         </Row>
         <Row className="pb-4 CardsContainer">
           {cardsData.slice(0, 3).map((items, index) => (
-            <Col className={items.name} xs={"11"} sm={"6"} md={"4"} lg={"5"} key={items.id}>
+            <Col
+              className={items.name}
+              xs={"11"}
+              sm={"11"}
+              md={"4"}
+              lg={"4"}
+              key={items.id}
+            >
               <div
                 className="card-2"
                 style={{ backgroundImage: `url(${items.img})` }}
@@ -92,16 +100,17 @@ const Aoutalamvillas = () => {
       </Container>
       <Container>
         <Row>
-          <h1>PLANS</h1>
+          <h1 className="large-heading">PLANS</h1>
         </Row>
         <Row>
-          <p>PROJECT PLANS</p>
+          <p className="small-headline">PROJECT PLANS</p>
         </Row>
         <Row className="CardsContainer">
           <ProjectPlans />
         </Row>
       </Container>
-    </div>
+      <Specification />
+    </>
   );
 };
 

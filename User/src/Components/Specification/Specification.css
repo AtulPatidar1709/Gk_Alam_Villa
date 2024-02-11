@@ -1,0 +1,33 @@
+.main-specification {
+  background-color: #f8f8f8;
+}
+
+.cardSpecifcation {
+  background-color: #cbcbcb;
+  position: relative;
+  /* Set a fixed height for the card */
+  height: 300px; /* Adjust the height as per your design */
+
+  /* Add scrollbar for overflow content */
+  overflow: auto;
+
+  /* Add padding and other styles as needed */
+  padding: 31px 0px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+.cardSpecifcation p {
+  /* Set a fixed height for the <p> tag */
+  max-height: 100px; /* Adjust the height as per your design */
+  font-size: 16px;
+  /* Allow text to overflow and show a scrollbar */
+  overflow: auto;
+  padding: 10px 0px 0px 16px;
+  /* Add padding and other styles as needed */
+  margin: 0;
+}
+
+.SpecificationName {
+  font-size: 18px;
+}

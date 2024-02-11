@@ -44,9 +44,15 @@ h3 {
   color: white;
 }
 
+.linkSection {
+  justify-content: center;
+  display: flex;
+  gap: 29px;
+  padding: 56px;
+}
 
-@media screen and (max-width : 991px) {
-    .rowsection {
-      gap: 42px;;
-    }
+@media screen and (max-width: 991px) {
+  .rowsection {
+    gap: 42px;
+  }
 }
