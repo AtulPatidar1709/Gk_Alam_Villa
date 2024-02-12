@@ -92,61 +92,66 @@ const Data = [
 ];
 
 const Specification = () => {
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,  
-      slidesToScroll: 2,
-      responsive: [
-        {
-          breakpoint: 992, // For tablets and smaller screens
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          },
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 992, // For tablets and smaller screens
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
-        {
-          breakpoint: 576, // For small screens
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
+      },
+      {
+        breakpoint: 576, // For small screens
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
-      ],
-    };
-  
-    return (
-      <div className="main-specification">
-        <Container>
-          <Row>
-            <Col>
-              <h1 className="large-heading">SPECIFICATIONS</h1>
-              <p className="small-headline">PROJECT SPECIFICATIONS</p>
-            </Col>
-          </Row>
+      },
+    ],
+  };
+
+  return (
+    <div className="main-specification">
+      <Container>
+        <Row>
+          <Col>
+            <h1 className="large-heading">SPECIFICATIONS</h1>
+            <p className="small-headline">PROJECT SPECIFICATIONS</p>
+          </Col>
+        </Row>
+        <Row >
           <Slider {...settings}>
             {Data.map((item, id) => (
-              <div key={id} className="cardSpecifcation">
-                <Row className="m-0">
-                  <Col md={"4"}>
-                        <img src={item.img} alt={item.name} />
-                  </Col>
-                  <Col className="d-flex align-items-center position-relative" md={"8"}>
-                    <h5 className="SpecificationName">{item.name}</h5>
-                  </Col>
-                </Row>
-                <Row className="pt-2">
-                  <Col className="d-flex align-items-center">
-                    <p>{item.desc}</p>
-                  </Col>
-                </Row>
+              <div className="cardRow">
+                <Col key={id} className="cardSpecifcation" md={"4"} sm={"1"}>
+                  <Row
+                    className="d-flex align-items-center justify-content-between"
+                    style={{ width: "234px" }}
+                  >
+                    <Col md="4">
+                      <img src={item.img} alt={item.name} />
+                    </Col>
+                    <Col md="7">
+                      <h5 className="SpecificationName">{item.name}</h5>
+                    </Col>
+                    <Col className="" md={"12"}>
+                      <p>{item.desc}</p>
+                    </Col>
+                  </Row>
+                </Col>
               </div>
             ))}
           </Slider>
-        </Container>
-      </div>
-    );
-  };
-  
-  export default Specification;
+        </Row>
+      </Container>
+    </div>
+  );
+};
+
+export default Specification;

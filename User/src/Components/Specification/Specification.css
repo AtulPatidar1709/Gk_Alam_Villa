@@ -2,29 +2,29 @@
   background-color: #f8f8f8;
 }
 
+.cardRow {
+  margin: 0px 5px;
+}
+
 .cardSpecifcation {
   background-color: #cbcbcb;
-  position: relative;
-  /* Set a fixed height for the card */
-  height: 300px; /* Adjust the height as per your design */
+  height: 282px;
+  width: 311.05px;
+  padding: 16px 16px 16px 16px;
+  min-height: 282px;
+  display: block;
+  border-radius: 5px;
+}
 
-  /* Add scrollbar for overflow content */
-  overflow: auto;
-
-  /* Add padding and other styles as needed */
-  padding: 31px 0px;
-  border: 1px solid #ccc;
-  margin: 10px;
+.cardOuter {
+  margin: 0px 5px;
 }
 
 .cardSpecifcation p {
-  /* Set a fixed height for the <p> tag */
-  max-height: 100px; /* Adjust the height as per your design */
+  max-height: 100px;
   font-size: 16px;
-  /* Allow text to overflow and show a scrollbar */
   overflow: auto;
   padding: 10px 0px 0px 16px;
-  /* Add padding and other styles as needed */
   margin: 0;
 }
 
