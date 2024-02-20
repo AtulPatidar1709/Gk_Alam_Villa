@@ -118,37 +118,34 @@ const Specification = () => {
 
   return (
     <div className="main-specification">
-      <Container>
-        <Row>
-          <Col>
+        <div>
+          <Col md={12} className="justify-content-center d-flex">
             <h1 className="large-heading">SPECIFICATIONS</h1>
-            <p className="small-headline">PROJECT SPECIFICATIONS</p>
           </Col>
-        </Row>
-        <Row >
-          <Slider {...settings}>
-            {Data.map((item, id) => (
-              <div className="cardRow">
-                <Col key={id} className="cardSpecifcation" md={"4"} sm={"1"}>
-                  <Row
-                    className="d-flex align-items-center justify-content-between"
-                    style={{ width: "234px" }}
-                  >
-                    <Col md="4">
-                      <img src={item.img} alt={item.name} />
-                    </Col>
-                    <Col md="7">
-                      <h5 className="SpecificationName">{item.name}</h5>
-                    </Col>
-                    <Col className="" md={"12"}>
-                      <p>{item.desc}</p>
-                    </Col>
-                  </Row>
-                </Col>
-              </div>
-            ))}
-          </Slider>
-        </Row>
+        </div>
+      <Container className="position-relative">
+        <h1 className="small-headline ">PROJECT SPECIFICATIONS</h1>
+        {/* <Slider {...settings}>
+          {Data.map((item, id) => (
+            <Row className="sliderRow">
+              <Col className="SliderContainer">
+                <Row>
+                  <Col md={"4"}>
+                    <img className="img-fluid" src={item.img} alt={item.name} />
+                  </Col>
+                  <Col md={"8"}>
+                    <h5>{item.name}</h5>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={"12"}>
+                    <p>{item.desc}</p>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          ))}
+        </Slider> */}
       </Container>
     </div>
   );

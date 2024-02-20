@@ -10,6 +10,7 @@ import Project4 from "../../assets/img/Amenities/New-Project-4.jpg";
 import Project5 from "../../assets/img/Amenities/New-Project-5.jpg";
 import ProjectPlans from "../ProjectsPlan/ProjectsPlan";
 import Specification from "../Specification/Specification";
+import mainbg from "../../assets/img/Folder-1-3-1.png";
 
 const cardsData = [
   {
@@ -42,8 +43,9 @@ const cardsData = [
 const Aoutalamvillas = () => {
   return (
     <>
-      <div className="img-contain">
-        <div className="text-area">
+      <div className="img-contain top120 ">
+      <img src={mainbg} className="img-fluid" alt="" />
+        <div className="secondtophome position-relative">
           <h5>Magnificent living lies ahead. </h5>
           <h2>
             Step into the new <br />

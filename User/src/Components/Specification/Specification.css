@@ -1,33 +1,14 @@
-.main-specification {
-  background-color: #f8f8f8;
-}
-
-.cardRow {
-  margin: 0px 5px;
-}
-
-.cardSpecifcation {
+.SliderContainer {
   background-color: #cbcbcb;
-  height: 282px;
-  width: 311.05px;
-  padding: 16px 16px 16px 16px;
-  min-height: 282px;
-  display: block;
   border-radius: 5px;
+  min-height: 282px !important;
 }
 
-.cardOuter {
-  margin: 0px 5px;
+.SliderContainer h5 {
+  text-transform: uppercase;
+  color: #05273b;
 }
-
-.cardSpecifcation p {
-  max-height: 100px;
+.SliderContainer p {
   font-size: 16px;
-  overflow: auto;
-  padding: 10px 0px 0px 16px;
-  margin: 0;
-}
-
-.SpecificationName {
-  font-size: 18px;
+  line-height: 22px;
 }

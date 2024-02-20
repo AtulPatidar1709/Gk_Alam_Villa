@@ -5,16 +5,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* .wrapper {
-  max-width: 1820px;
-  width: 95%;
-  padding: 5px 0px;
-  gap: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
 :root {
   --ff-body: "NunitoSans-Regular";
   --ff-heading: "Gilroy ExtraBold";
@@ -24,6 +14,14 @@
   --fs-xl: 5rem;
   --fs-600: 2rem;
   --fs-400: 1rem;
+}
+
+body {
+  color: #6b6b6b;
+  word-wrap: break-word;
+  line-height: 1.7;
+  font-size: 15px;
+  font-family: var(--ff-body);
 }
 
 @font-face {
@@ -65,13 +63,73 @@
   font-family: "Gilroy ExtraBold";
   font-weight: 100;
   text-align: right;
-  font-size: clamp(2.75rem, 1.395rem + 7.478vw, 8.125rem);
-  /* font-size: clamp(2.75rem, 1.804rem + 4.732vw, 9.375rem); */
+  font-size: clamp(2.5rem, 0.841rem + 9.483vw, 9.375rem);
+  line-height: clamp(4.125rem, 2.647rem + 8.448vw, 10.25rem);
   padding: 40px 0px 0px 0px;
   color: #c6c6c6;
+  margin-bottom: 0px;
 }
 .small-headline {
+  font-family: "Gilroy ExtraBold";
+  font-weight: 100;
   color: #ce8f63;
   font-weight: 900;
   font-size: clamp(1.25rem, 0.83rem + 2.316vw, 2.313rem);
+  padding-left: 115px;
+}
+
+.small-headline::before {
+  content: "";
+  background-color: #ce8f63;
+  height: 2px;
+  width: 114px;
+  position: absolute;
+  left: -0px;
+  bottom: 50%;
+}
+
+.borderb {
+  border-radius: 30px !important;
+  font-size: clamp(1rem, 0.911rem + 0.446vw, 1.313rem);
+  font-family: "Nunito Sans SemiBold";
+  padding: 15px 25px;
+  background: #ce8f63;
+  color: #ffffff !important;
+  border: 1px solid #ce8f63;
+  text-decoration: none;
+}
+.homeAccordian .accordion-item {
+  border: none;
+}
+
+.homeAccordian .accordion-body {
+  width: 80%;
+  color: #6b6b6b;
+}
+
+.homeAccordian .accordion-button {
+  font-size: 25px !important;
+  font-family: "Gilroy ExtraBold";
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.homeAccordian .accordion-button::after {
+  background-image: url("./assets/img/Accordian/add.png");
+}
+.homeAccordian .accordion-button:not(.collapsed)::after {
+  background-image: url("./assets/img/Accordian/minus.png");
+}
+.accordion-button:not(.collapsed) {
+  color: #000;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 770px) {
+  .small-headline::before {
+    bottom: 16%;
+  }
 }

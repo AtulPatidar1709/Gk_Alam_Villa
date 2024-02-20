@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Card, Col, Container, Row } from "reactstrap";
-import { DefaultPlayer as Video } from "react-html5video";
+import { Col, Container, Row } from "reactstrap";
+import { Fade } from "react-awesome-reveal";
 import "./Whyus.css";
 import "../../App.css";
 import "../Cards/Cards";
-// import "../YoutubeEmbed.js";
-import whySection from "../../assets/img/whySection.png";
 import Accordian from "../Accordian/Accordian";
-import whyUs from "../../assets/img/WhyUS.png";
+import Specification from "../Specification/Specification";
+import whySection from "../../assets/img/whySection.png";
 import logo1 from "../../assets/img/SliderImg/logo1.png";
 import logo2 from "../../assets/img/SliderImg/logo2.png";
 import logo3 from "../../assets/img/SliderImg/logo3.png";
@@ -37,15 +36,21 @@ const Whyus = () => {
 
   return (
     <>
-      <div className="main-why">
-        <div className="main-why">
-          <h1 className="why-heading large-heading animate__animated animate__fadeInDown">
-            WHY CHOOSE US?
-          </h1>
-          <h4 className="choose-us small-headline pl-5 animate__animated animate__bounceInUp">
-            WHY CHOOSE US
-          </h4>
-        </div>
+      <div className="main-why pb-240">
+        <Fade
+          cascade
+          direction="up"
+          damping={0.5e-1}
+          delay={100}
+          distance="20px"
+        >
+          <div className="main-why">
+            <h1 className="why-heading large-heading">WHY CHOOSE US?</h1>
+            <h4 className="choose-us position-relative small-headline pl-5">
+              WHY CHOOSE US
+            </h4>
+          </div>
+        </Fade>
         <Container>
           <Row className="align-items-center">
             <Col md={"7"}>
@@ -54,9 +59,17 @@ const Whyus = () => {
               </div>
             </Col>
             <Col md={"5"}>
-              <div className="img-fit">
-                <img src={whySection} alt="" className="img-about" />
-              </div>
+              <Fade
+                cascade
+                direction="left"
+                damping={0.5e-1}
+                delay={100}
+                distance="120px"
+              >
+                <div className="img-fit">
+                  <img src={whySection} alt="" className="img-about" />
+                </div>
+              </Fade>
             </Col>
           </Row>
         </Container>
@@ -64,32 +77,26 @@ const Whyus = () => {
 
       {/* Experiance Area */}
       <Container className="Experiance">
-        <Row className="align-items-center flex p-16 bgClr">
-          <Col md={4} className="align-items-center d-grid">
-            <h1 className="heads">
-              35+ <br /> Years
-            </h1>
+        <Row className="align-items-center expRow flex p-16 bgClr">
+          <Col md={4} className="align-items-center d-grid pt-50 pb-50">
+            <h1 className="heads">35+</h1>
+            <p className="peraExperiance">Years</p>
           </Col>
-          <Col md={4} className="align-items-center d-grid">
-            <h1 className="heads">
-              4000+ <br /> Happy Families
-            </h1>
+          <Col md={4} className="align-items-center d-grid pt-50 pb-50">
+            <h1 className="heads">4000+</h1>
+            <p className="peraExperiance">Happy Families</p>
           </Col>
-          <Col md={4} className="align-items-center d-grid">
-            <h1 className="heads">
-              3 MILLION+ <br />
-              Sq.Ft. Delivered
-            </h1>
+          <Col md={4} className="align-items-center d-grid pt-50 pb-50">
+            <h1 className="heads">3 Million+</h1>
+            <p className="peraExperiance">Sq.Ft. Delivered</p>
           </Col>
         </Row>
       </Container>
 
       {/* Ongoing Area */}
-      <Container className="w-90 p-16 flex-column text-bg-[#c6c6c6] border">
+      <h1 className="large-heading ongoing-heading">ONGOING PROJECTS</h1>
+      <Container className="w-90 position-relative p-16 flex-column text-bg-[#c6c6c6] border">
         <Col className="main-ongoing">
-          <Row>
-            <h1 className="ongoing-heading large-heading">ONGOING PROJECTS</h1>
-          </Row>
           <Row>
             <h4 className="choose-us small-headline">ONGOING PROJECTS</h4>
           </Row>
@@ -101,8 +108,8 @@ const Whyus = () => {
           <div className="logos-slide">{logoElements}</div>
         </div>
       </Container>
-      <Cards/>
-      {/* Slider Area */}
+      <Cards />
+      <Specification />
     </>
   );
 };

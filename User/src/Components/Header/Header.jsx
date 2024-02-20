@@ -9,7 +9,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="header-section pt-2 pb-2">
+    <header className="header-section pt-3 pb-3">
       <Container className="">
          <Row className="align-items-center">
            <Col md={"3"} xs={"4"} className="order_1">

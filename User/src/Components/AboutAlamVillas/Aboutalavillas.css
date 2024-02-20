@@ -1,4 +1,4 @@
-.img-contain {
+/* .img-contain {
   background-image: url("../../assets/img/bg-card-logo.png");
   background-size: cover;
   background-position: center;
@@ -6,12 +6,9 @@
   display: flex;
   align-items: flex-start;
   object-fit: cover;
-}
+} */
 
-.img-contain img {
-  width: 100%;
-  margin: 0 auto;
-}
+
 
 .text-area {
   /* position: absolute; */

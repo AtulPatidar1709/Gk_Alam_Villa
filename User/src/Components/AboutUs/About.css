@@ -29,6 +29,8 @@
 .img-col {
   display: flex;
   align-items: flex-start;
+  padding-right: 36px;
+
 }
 
 .img-fit {
@@ -80,35 +82,36 @@
   font-family: Inter;
 }
 
-
-/* .sow-headline ::before {
-  content: "";
-  background-color: #ce8f63;
-  height: 2px;
-  width: 114px;
-  position: absolute;
-  left: 0px;
-  top: 50%;
-} */
 .luxury,
 .luxury > h3 {
   width: 90%;
-  font-family: Inter;
+  font-family: 'Gilroy Light' ;
   font-size: 1.5rem;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
 }
+
 .paragraphs {
   color: hsl(0, 0%, 42%);
+}
+
+.fs45 {
+  color: #000;
+  text-transform: uppercase;
+  width: 81%;
+  font-size: clamp(1.625rem, 1.286rem + 1.696vw, 2.813rem);
+  font-family: "Gilroy Light";
+  line-height:clamp(2.313rem, 2.009rem + 1.518vw, 3.375rem);
 }
 
 .pera {
   padding: 0rem 0;
   font-size: 1rem;
-  color: #000;
+  color:  hsl(0, 0%, 42%);
 }
+
 
 @media screen and (max-width: 770px) {
   .main {
@@ -130,7 +133,9 @@
   }
 
   .sow-headline {
+    font-family: 'Gilroy ExtraBold' ;
     color: #ce8f63;
+    font-weight: 100;
     font-size: x-large;
     padding-top: 3rem;
   }

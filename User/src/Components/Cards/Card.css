@@ -1,38 +1,33 @@
-/* .bg-card {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-} */
+  .bgtestimonials {
+    margin: 0 auto;
+    background-image: url("../../assets/img/bg-card-logo.png"); /* Use url() for the image path */
+    background-size: cover; 
+    color: #fff;
+    padding: 100px 0px;
+  }
 
-/* .bg-card > img {
-  width: 100%;
-  margin: 0 auto;
-} */
+  .card-slide {
+    background-color: rgba(5, 39, 59, 0.4);
+    padding: 50px 50px;
+  }
 
-.card-container {
-  background-image: url("../../assets/img/bg-card-logo.png"); /* Use url() for the image path */
-  background-size: cover; /* Adjust to your needs */
-  color: #fff;
-  padding: 100px;
-}
+  .CardName {
+    font-family: "Nunito Sans ExtraBold";
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 24px;
+    text-decoration: none solid rgb(221, 176, 145);
+    word-spacing: 0px;
+  }
 
-.card-slide {
-  background-color: rgba(5, 39, 59, 0.4);  padding: 21px 0px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; */
-}
+  /* .bg-card-customers-img {
+    display: flex;
+    align-items: flex-start;
+    /* align-items: center; This line seems redundant, you might want to remove it 
+  } */
 
-.bg-card-customers-img {
-  display: flex;
-  align-items: flex-start;
-  /* align-items: center; This line seems redundant, you might want to remove it */
-}
-
-.bg-img-card {
-  width: 100%;
-  border:2px solid orange;
-  padding: 10px;
-
-}
+  .bg-img-card {
+    width: 100%;
+    border: 2px solid orange;
+    padding: 10px;
+  }
