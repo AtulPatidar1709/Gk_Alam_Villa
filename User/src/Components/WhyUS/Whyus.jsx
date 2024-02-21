@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Fade } from "react-awesome-reveal";
+import  CountUp  from 'react-countup';
 import "./Whyus.css";
 import "../../App.css";
 import "../Cards/Cards";
@@ -37,13 +38,17 @@ const Whyus = () => {
   return (
     <>
       <div className="main-why pb-240">
+        <div>
+          <img src="" alt="" />
+        </div>
+        
         <Fade
           cascade
           direction="up"
           damping={0.5e-1}
           delay={100}
           distance="20px"
-        >
+        > 
           <div className="main-why">
             <h1 className="why-heading large-heading">WHY CHOOSE US?</h1>
             <h4 className="choose-us position-relative small-headline pl-5">
@@ -79,27 +84,43 @@ const Whyus = () => {
       <Container className="Experiance">
         <Row className="align-items-center expRow flex p-16 bgClr">
           <Col md={4} className="align-items-center d-grid pt-50 pb-50">
-            <h1 className="heads">35+</h1>
+            <h1 className="heads"><CountUp end={35} duration={20}/>+</h1>
             <p className="peraExperiance">Years</p>
           </Col>
           <Col md={4} className="align-items-center d-grid pt-50 pb-50">
-            <h1 className="heads">4000+</h1>
+            <h1 className="heads"><CountUp end={4000} duration={5} />+</h1>
             <p className="peraExperiance">Happy Families</p>
           </Col>
           <Col md={4} className="align-items-center d-grid pt-50 pb-50">
-            <h1 className="heads">3 Million+</h1>
+            <h1 className="heads"><CountUp end={3} duration={20} />Million+</h1>
             <p className="peraExperiance">Sq.Ft. Delivered</p>
           </Col>
         </Row>
       </Container>
 
       {/* Ongoing Area */}
-      <h1 className="large-heading ongoing-heading">ONGOING PROJECTS</h1>
+      <Fade
+        cascade
+        direction="up"
+        damping={0.5e-1}
+        delay={100}
+        distance="120px"
+      >
+        <h1 className="large-heading ongoing-heading">ONGOING PROJECTS</h1>
+      </Fade>
       <Container className="w-90 position-relative p-16 flex-column text-bg-[#c6c6c6] border">
         <Col className="main-ongoing">
-          <Row>
-            <h4 className="choose-us small-headline">ONGOING PROJECTS</h4>
-          </Row>
+          <Fade
+            cascade
+            direction="up"
+            damping={0.5e-1}
+            delay={100}
+            distance="120px"
+          >
+            <Row>
+              <h4 className="choose-us small-headline">ONGOING PROJECTS</h4>
+            </Row>
+          </Fade>
           <Row>{/* <YoutubeEmbed embedId="oJM7v0Jpn3E" /> */}</Row>
         </Col>
       </Container>

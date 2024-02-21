@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Fade } from "react-awesome-reveal";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Row, Col } from "reactstrap";
-import Slider from "react-slick";
+import { FreeMode, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 // Import Row and Col from reactstrap
 import "./Specification.css";
 import doorwindow from "../../assets/img/Specifications/doorwindow.png";
@@ -92,60 +98,83 @@ const Data = [
 ];
 
 const Specification = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 992, // For tablets and smaller screens
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 576, // For small screens
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="main-specification">
-        <div>
-          <Col md={12} className="justify-content-center d-flex">
+      <div>
+        <Col md={12} className="justify-content-center d-flex">
+          <Fade
+            cascade
+            direction="up"
+            damping={0.5e-1}
+            delay={100}
+            distance="120px"
+          >
             <h1 className="large-heading">SPECIFICATIONS</h1>
-          </Col>
-        </div>
+          </Fade>
+        </Col>
+      </div>
       <Container className="position-relative">
-        <h1 className="small-headline ">PROJECT SPECIFICATIONS</h1>
-        {/* <Slider {...settings}>
-          {Data.map((item, id) => (
-            <Row className="sliderRow">
-              <Col className="SliderContainer">
-                <Row>
-                  <Col md={"4"}>
-                    <img className="img-fluid" src={item.img} alt={item.name} />
-                  </Col>
-                  <Col md={"8"}>
-                    <h5>{item.name}</h5>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md={"12"}>
-                    <p>{item.desc}</p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          ))}
-        </Slider> */}
+        <Fade
+          cascade
+          direction="up"
+          damping={0.5e-1}
+          delay={100}
+          distance="120px"
+        >
+          <h1 className="small-headline ">PROJECT SPECIFICATIONS</h1>
+        </Fade>
+        <Row className="justify-content-between" md={"12"} sm={"12"}>
+          <Swiper
+            freeMode={true}
+            modules={[FreeMode]}
+            breakpoints={{
+              576: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+            className="mySwiper"
+          >
+            {Data.map((item, id) => (
+              <SwiperSlide>
+                <Fade
+                  cascade
+                  direction="up"
+                  damping={0.5e-1}
+                  delay={100}
+                  distance="120px"
+                >
+                <Col md={"12"} key={id}>
+                  <Row className="innnerCard">
+                    <Row className="rowFirst">
+                      <Col className="tittleSection" md={"4"}>
+                        <img
+                          className="img-fluid"
+                          src={item.img}
+                          alt={item.name}
+                        />
+                      </Col>
+                      <Col md={"8"} className="d-flex align-content-center">
+                        <h5 className="fs-18">{item.name}</h5>
+                      </Col>
+                    </Row>
+                    <Row className="d-flex align-align-content-md-start">
+                      <Col md={"12"} className="peragraphCard">
+                        {item.desc}
+                      </Col>
+                    </Row>
+                  </Row>
+                </Col>
+                </Fade>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Row>
       </Container>
     </div>
   );

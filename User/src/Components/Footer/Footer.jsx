@@ -16,10 +16,10 @@ const Footer = () => {
     <div className="footer-back">
       <Container>
         <Row className="pt-5 rowsection">
-          <Col md={"5"} sm={"9"} xs={"10"} lg={"2"}>
+          <Col className="d-flex align-items-start justify-content-center" md={"3"} sm={"9"} xs={"10"} lg={"3"}>
             <img src={FooterInner} alt="footer-inner" />
           </Col>
-          <Col md={"5"} sm={"10"} xs={"10"} lg={"3"}>
+          <Col md={"3"} sm={"10"} xs={"10"} lg={"3"}>
             <h3>ONGOING PROJECTS</h3>
             <div className="ongoingList">
               <ul>
@@ -35,7 +35,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col md={"5"} sm={"10"} xs={"10"} lg={"3"}>
+          <Col md={"3"} sm={"10"} xs={"10"} lg={"3"}>
             <h3>Get in Touch</h3>
             <div className="paragraph">
               <p>
@@ -66,7 +66,7 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col md={"6"} sm={"10"} xs={"10"} lg={"4"}>
+          <Col md={"3"} sm={"10"} xs={"10"} lg={"3"}>
             <h3>Join Our Newsletter </h3>
             <div>
               <p>Get the latest project updates</p>

@@ -7,6 +7,16 @@
   background-size: cover;
 }
 
+.rowsection {
+  padding-top: 102px;
+  display: flex;
+  justify-content: center;
+}
+
+/* .rowsection {
+
+} */
+
 .ongoingList {
   display: flex;
   justify-content: space-between;
@@ -21,7 +31,8 @@
 h3 {
   display: inline-block;
   font-family: "Nunito Sans ExtraBold";
-  font-size: 21px;
+  font-size: 25px;
+  line-height: 30px;
   color: #ddb091;
 }
 .emailArea {
@@ -29,19 +40,20 @@ h3 {
 }
 
 .inputArea {
-  padding: 4px 6px;
+  padding: 6px 6px;
   background: transparent;
   border: 2px solid #eef7f7;
-  border-radius: 7px;
+  border-radius: 15px;
 }
 
 .btnSubmit {
-  margin-top: 4px;
-  width: 50%;
-  padding: 5px;
-  background: #ddb091;
-  border-radius: 6px;
-  color: white;
+  text-transform: uppercase;
+  border-radius: 9px;
+  width: 104px;
+  background-color: #ddb091;
+  border: none;
+  padding: 8px 21px;
+  margin-top: 5px;
 }
 
 .linkSection {
@@ -53,6 +65,14 @@ h3 {
 
 @media screen and (max-width: 991px) {
   .rowsection {
-    gap: 42px;
+    gap: 40px;
+    padding-top: 102px;
+    display: flex;
+    justify-content: start;
+  }
+
+  h3 {
+    font-size: 23px;
+    line-height: 28px;
   }
 }

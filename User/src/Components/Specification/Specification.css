@@ -8,7 +8,50 @@
   text-transform: uppercase;
   color: #05273b;
 }
+
 .SliderContainer p {
   font-size: 16px;
   line-height: 22px;
 }
+
+.sliderRow {
+  padding: 5%;
+  margin: 0px 2%;
+  min-height: 162px;
+}
+
+.innnerCard {
+  padding: 5%;
+  margin: 0px 2%;
+  height: 282px !important;
+  background-color: #cbcbcb;
+  margin-bottom: 80px;
+  border-radius: 8px;
+}
+
+.rowFirst {
+  display: flex;
+  align-items: center;
+}
+.peragraphCard {
+  margin-top: 5px;
+  max-height: 115px;
+  overflow-y: auto;
+  color: #05273b;
+  scrollbar-width: thin;
+  scrollbar-color: #05273b #ddb091;
+}
+/* 
+.tittleSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 10px;
+} */
+
+.fs-18 {
+  text-transform: uppercase;
+  color: #05273b;
+}
+
