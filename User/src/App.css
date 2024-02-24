@@ -130,6 +130,16 @@ body {
 
 @media screen and (max-width: 770px) {
   .small-headline::before {
-    bottom: 16%;
+    content: "";
+    background-color: #ce8f63;
+    height: 2px;
+    width: 64px;
+    position: absolute;
+    left: -0px;
+    bottom: 10%;
+  }
+
+  .small-headline {
+    padding-left: 68px;
   }
 }

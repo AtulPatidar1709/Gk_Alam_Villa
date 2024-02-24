@@ -8,10 +8,21 @@
   object-fit: cover;
 } */
 
+.bg-2 {
+  background-image: url("../../assets/img/bg-card-logo.png");
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-position: center center;
+  background-size: cover;
+  padding: 170px 0px 170px 0px;
+}
 
-
+.headSection {
+  padding-left: 50px;
+}
+/* 
 .text-area {
-  /* position: absolute; */
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -19,7 +30,26 @@
   justify-content: center;
   padding: 16% 10px;
   z-index: 1;
+} */
+
+.smallHeadlinePlans {
+  font-family: "Gilroy ExtraBold";
+  font-weight: 100;
+  color: #ce8f63;
+  font-weight: 900;
+  font-size: clamp(1.25rem, 0.83rem + 2.316vw, 2.313rem);
+  padding-left: 25px;
 }
+
+/* .smallHeadlinePlans::before {
+  content: "";
+  background-color: #ce8f63;
+  height: 2px;
+  width: 114px;
+  position: absolute;
+  left: -0px;
+  bottom: 50%;
+} */
 
 h5 {
   font-family: "Nunito Sans Regular";
@@ -38,34 +68,50 @@ h2 {
   color: #000;
 }
 
-.CardsContainer {
+/* .CardsContainer {
   justify-content: center;
   align-items: center;
-}
+  padding-top: 50px;
+  width: 100%; 
+}*/
 
 .card-2 {
   display: flex;
-  background-image: url(/src/assets/img/Amenities/New-Project-1.jpg);
-  height: 54vh;
-  background-size: cover;
-  border-radius: 10px;
-  width: 100%;
-  align-items: end;
-  justify-content: center;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  align-items: flex-start;
 }
 
 .card-2 > img {
-  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .heading-holder {
-  font-size: calc(0.375rem + 1.5vw);
+  color: #fff;
+  text-align: center;
+  font-family: "Gilroy ExtraBold";
+  background-color:#05273B;
+  z-index: 3;
+  position: relative;
+  width: max-content;
+  margin: auto;
+  margin-top: -69px;
 }
 
 .heading-holder > h1 {
   background-color: #05273b;
   padding: 2px 4px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 760px) {
+  .headSection {
+    padding-left: 5px;
+  }
+  .bg-2 {
+    padding: 100px 0px 100px 0px;
+  }
+  /* .smallHeadlinePlans::before {
+    bottom:40%;
+  } */
 }

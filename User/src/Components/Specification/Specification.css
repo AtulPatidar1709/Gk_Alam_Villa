@@ -33,25 +33,41 @@
   display: flex;
   align-items: center;
 }
-.peragraphCard {
-  margin-top: 5px;
-  max-height: 115px;
-  overflow-y: auto;
-  color: #05273b;
-  scrollbar-width: thin;
-  scrollbar-color: #05273b #ddb091;
-}
-/* 
+
 .tittleSection {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
-} */
+}
 
 .fs-18 {
   text-transform: uppercase;
   color: #05273b;
+  font-family: "Gilroy Light";
+  font-weight: 100;
+  line-height: 23px;
+
+  font-size: 18px;
 }
 
+.peragraphCard {
+  scrollbar-width: thin;
+  scrollbar-color: #05273b #ddb091;
+  overflow-y: auto;
+
+  margin-top: 19px;
+  max-height: 132px;
+}
+
+.peragraph {
+  color: #05273b;
+}
+
+@media screen and (max-width: 760) {
+  .fs-18 {
+    line-height: 20px;
+    font-size: 18px;
+  }
+}

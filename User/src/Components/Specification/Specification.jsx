@@ -51,13 +51,13 @@ const Data = [
     index: 5,
     img: doorwindow,
     name: "DOOR WINDOWS",
-    desc: `<b>MAIN DOOR</b> : Teak Wood I Engineered Wood and Flush Doors with Teak Veneer Shutters aesthetically designed and finished with Polish, fixed with hardware of reputed make. <br> <b>INTERNAL DOOR</b> : All internal doors with Engineered Wood and Flush Doors with Teak Veneer Shutters aesthetically designed and finished with Polish, fixed with hardware of reputed make <br> <b>FRENCH WINDOWS</b> : Three track opening for balconies and open terrace. UPVC Window frames, Shutters with Glass Panels and Mosquito Mesh of 3.0 Track with Standard Hardware.`,
+    desc: `MAIN DOOR : Teak Wood I Engineered Wood and Flush Doors with Teak Veneer Shutters aesthetically designed and finished with Polish, fixed with hardware of reputed make. INTERNAL DOOR : All internal doors with Engineered Wood and Flush Doors with Teak Veneer Shutters aesthetically designed and finished with Polish, fixed with hardware of reputed make <br> FRENCH WINDOWS : Three track opening for balconies and open terrace. UPVC Window frames, Shutters with Glass Panels and Mosquito Mesh of 3.0 Track with Standard Hardware.`,
   },
   {
     index: 6,
     img: flooring,
     name: "FLOORING",
-    desc: "<b>INTERNAL :</b> 800 x 800 size vitrified tiles of reputed brand in all rooms.<br> <b>BALCONIES:</b> Anti skid Wood Textured tiles.<br> <b>OPEN TERRACE :</b> Anti skid Wood Textured tiles. <br><b>UTILITY/ WASH :</b> Rustic Ceramic tiles for Floor and Glazed Ceramic Tiles of reputed brand upto 3' for Walls.<br><b> STAIRCASE:</b> Vitrified Tiles/ NATURAL<br> <b>STONE PARKING :</b> Designer Tiles/ Natural Stone/ Equivalent",
+    desc: "INTERNAL : 800 x 800 size vitrified tiles of reputed brand in all rooms.<br> BALCONIES: Anti skid Wood Textured tiles.<br> OPEN TERRACE : Anti skid Wood Textured tiles. <br>UTILITY/ WASH : Rustic Ceramic tiles for Floor and Glazed Ceramic Tiles of reputed brand upto 3' for Walls.<br> STAIRCASE: Vitrified Tiles/ NATURAL<br> STONE PARKING : Designer Tiles/ Natural Stone/ Equivalent",
   },
   {
     index: 7,
@@ -81,7 +81,7 @@ const Data = [
     index: 10,
     img: plastering,
     name: "PLASTERING",
-    desc: "Joint of the R.C.C. structure &amp; brick wall will be covered with mesh before internal wall plastering commences.<br> <b>EXTERNAL:</b> Double coat cement plastering with Sponge finish. <br> <b>INTERNAL:</b> Smooth Cement Plastering with sponge finish.",
+    desc: "Joint of the R.C.C. structure &amp; brick wall will be covered with mesh before internal wall plastering commences.<br> EXTERNAL: Double coat cement plastering with Sponge finish. <br> INTERNAL: Smooth Cement Plastering with sponge finish.",
   },
   {
     index: 11,
@@ -142,35 +142,27 @@ const Specification = () => {
           >
             {Data.map((item, id) => (
               <SwiperSlide>
-                <Fade
-                  cascade
-                  direction="up"
-                  damping={0.5e-1}
-                  delay={100}
-                  distance="120px"
-                >
                 <Col md={"12"} key={id}>
                   <Row className="innnerCard">
                     <Row className="rowFirst">
-                      <Col className="tittleSection" md={"4"}>
+                      <Col className="tittleSection" xs={"4"} md={"4"}>
                         <img
                           className="img-fluid"
                           src={item.img}
                           alt={item.name}
                         />
                       </Col>
-                      <Col md={"8"} className="d-flex align-content-center">
+                      <Col md={"8"} xs={"8"} className="d-flex justify-content-center">
                         <h5 className="fs-18">{item.name}</h5>
                       </Col>
                     </Row>
                     <Row className="d-flex align-align-content-md-start">
                       <Col md={"12"} className="peragraphCard">
-                        {item.desc}
+                        <p className="peragraph">{item.desc}</p>
                       </Col>
                     </Row>
                   </Row>
                 </Col>
-                </Fade>
               </SwiperSlide>
             ))}
           </Swiper>

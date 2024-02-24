@@ -35,7 +35,7 @@ const About = () => {
               <div className="img-fit">
                 <img
                   src={aboutimg}
-                  className="img-about animate__animated animate__bounceInRight image-fluid"
+                  className="img-about image-fluid"
                   alt=""
                 />
               </div>
