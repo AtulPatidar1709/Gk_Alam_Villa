@@ -11,6 +11,8 @@ import Layout from "./Layout.jsx";
 import Home from "./Pages/Home.jsx";
 import AboutAlamVillas from "./Components/AboutAlamVillas/Aoutalamvillas.jsx";
 import OnGoingProjects from "./Components/OnGoingProjects/OnGoingProjects.jsx";
+import Testimonial from "./Components/Testimonial/Testimonial.jsx";
+import ContactUs from "./Components/ContactUs/ContactUs.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +20,9 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="AboutAlamVillas/" element={<AboutAlamVillas />} />
       <Route path="OnGoingProjects/" element={<OnGoingProjects />} />
-      {/* <Route path="" element={} /> */}
+      <Route path="Testimonial/" element={<Testimonial/>} />
+      <Route path="ContactUs/" element={<ContactUs/>} />
+
     </Route>
   )
 );

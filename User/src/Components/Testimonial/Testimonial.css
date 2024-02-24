@@ -1,0 +1,16 @@
+.bgTestimonial {
+  background-image: url("../../assets/img/Testimonial.png");
+  background-size: cover;
+}
+
+.heagingTestimonial {
+  font-size: clamp(2.188rem, 1.473rem + 3.571vw, 4.688rem);
+  font-family: "Gilroy ExtraBold";
+  padding: 227px 0px 227px 0px;
+}
+
+@media screen and (max-width: 760px) {
+  .heagingTestimonial {
+    padding: 70px 0px 70px 0px;
+  }
+}

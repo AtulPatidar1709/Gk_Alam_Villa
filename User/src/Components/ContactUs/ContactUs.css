@@ -1,0 +1,97 @@
+.bgContactUs {
+  background-image: url("../../assets/img/ContactUs.png");
+  background-size: cover;
+}
+
+.heagingContactUS {
+  font-size: clamp(2.188rem, 1.473rem + 3.571vw, 4.688rem);
+  font-family: "Gilroy ExtraBold";
+  padding: 200px 0px 200px 0px;
+}
+.sendMsg {
+  text-align: left;
+  color: #161616;
+  font-size: 48px;
+  line-height: 1.4em;
+  font-family: "Nunito Sans ExtraBold";
+}
+
+.title {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  padding: 0 15px;
+  color: #fff;
+  text-align: center !important;
+  font-size: 25px !important;
+  font-weight: 700 !important;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.formGroup label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.outerSec {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.selldo {
+  display: block;
+  width: 100%;
+  height: 34px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  padding: 6px 12px;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.form {
+  margin-bottom: 30px;
+  background-color: #05273b;
+  padding: 30px 30px 30px 30px;
+}
+
+.form-control {
+  color: #000;
+  width: 100%;
+}
+
+option {
+  color: #000;
+}
+
+
+.submit-btn {
+  background-color: #de8383;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px 0px;
+  border-radius: 8px;
+}
+
+.submit-btn:hover {
+  background-color: #e68888;
+}
+
+.outerBtn {
+  padding-top: 29px;}
+
+@media screen and (max-width: 760px) {
+  .heagingContactUS {
+    padding: 70px 0px 70px 0px;
+  }
+}
