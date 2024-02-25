@@ -47,7 +47,7 @@
   transition: all 0.5s;
 }
 
-.nav-items a:hover{
+.nav-items a:hover , a:active{
   color: #d3ac29;
 }
 

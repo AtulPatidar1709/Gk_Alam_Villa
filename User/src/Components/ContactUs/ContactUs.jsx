@@ -1,7 +1,16 @@
 import { React } from "react";
 import { Container, Row, Col } from "reactstrap";
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css'
+import PhoneInput from "react-phone-input-2";
+// import "react-phone-input-2/lib/style.css";
+import Mailicon from "../../assets/icons/envelope.png";
+import Callicon from "../../assets/icons/phone-call.png";
+import GlobeIcon from "../../assets/icons/globe.png";
+import facebook from "../../assets/img/LinksSvgDark/facebook.svg";
+import insta from "../../assets/img/LinksSvgDark/insta.svg";
+import linkedin from "../../assets/img/LinksSvgDark/linkedin.png";
+import twitter from "../../assets/img/LinksSvgDark/twitter.svg";
+import youtube from "../../assets/img/LinksSvgDark/youtube.svg";
+
 import "./ContactUs.css";
 import { useState } from "react";
 const ContactUs = () => {
@@ -98,8 +107,8 @@ const ContactUs = () => {
         </Container>
       </div>
       <Container>
-        <Row>
-          <Col md="7" className="pt-5">
+        <Row className="d-flex justify-content-around">
+          <Col md={"7"} className="pt-5">
             <Row>
               <h1 className="sendMsg">SEND US A Message!</h1>
             </Row>
@@ -142,12 +151,12 @@ const ContactUs = () => {
               <Col md={6}>
                 <div className="outerSec">
                   <div className="formGroup">
-                    <label >Phone</label>
-                    <PhoneInput
+                    <label>Phone</label>
+                    <input
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Phone"
-                      country={'Ind'}
+                      country={"Ind"}
                       name="phone"
                       className="form-control"
                     />
@@ -264,7 +273,7 @@ const ContactUs = () => {
                   </div>
                 </div>
               </Col>
-              <Col md={"6" }>
+              <Col md={"6"}>
                 <div className="outerBtn">
                   <div className="formGroup">
                     <button onClick={handleSubmit} className="submit-btn">
@@ -276,9 +285,70 @@ const ContactUs = () => {
             </Row>
           </Col>
           <Col md={"4"}>
-            <div>
-              <h3>ADDRESS INFO</h3>
+            <div className="">
+              <h3 className="headingContact">ADDRESS INFO</h3>
+              <div className="addSection">
+                <span>GK BUILDERS AND DEVELOPERS</span>
+                <p>
+                  #35/8, Aastha Gk Colony, Sainikpuri, Secunderabad,
+                  Telengana-500094.
+                </p>
+                <br />
+                <div className="iconContact">
+                  <p>
+                    <a href="">
+                      <img src={Mailicon} alt="MailIcon" />{" "}
+                      salesteam@gkdevelopers.in
+                    </a>
+                  </p>
+                  <p>
+                    <a href="">
+                      <img src={Callicon} alt="CallIcon" /> +91 95138 81515
+                    </a>
+                  </p>
+                  <p>
+                    <a href="">
+                      <img src={GlobeIcon} alt="CallIcon" /> www.gkdevelopers.in
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div className="contactMain">
+                <h3>FOLLOW US ON</h3>
+                <div className="btmOfficails">
+                  <a href="">
+                    <img src={twitter} alt="twitter" />
+                  </a>
+                  <a href="">
+                    <img src={facebook} alt="facebook" />
+                  </a>
+                  <a href="">
+                    <img src={insta} alt="insta" />
+                  </a>
+                  <a href="">
+                    <img src={youtube} alt="youtube" />
+                  </a>
+                  <a href="">
+                    <img src={linkedin} alt="linkedin" />
+                  </a>
+                </div>
+              </div>
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={"12"} className="d-flex justify-content-center pb-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.9993098401615!2d78.54609757493763!3d17.507546383400218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9befb60f0057%3A0xd6d72644e746a710!2sGK%20Alam%20Villas!5e0!3m2!1sen!2sin!4v1708881724796!5m2!1sen!2sin"
+              style={{
+                width: "100%",
+                height: "50vh", // Adjust the height as needed
+                border: "0",
+                allowfullscreen: "",
+                loading: "lazy",
+                referrerpolicy: "no-referrer-when-downgrade",
+              }}
+            ></iframe>
           </Col>
         </Row>
       </Container>

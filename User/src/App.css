@@ -142,4 +142,8 @@ body {
   .small-headline {
     padding-left: 68px;
   }
+
+  .homeAccordian .accordion-body {
+    width: 101%;
+  }
 }
